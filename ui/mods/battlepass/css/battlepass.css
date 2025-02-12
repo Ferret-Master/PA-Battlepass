@@ -1,0 +1,487 @@
+.section_content_campaign
+{
+    height: calc(100% - 175px);
+    box-shadow: none;
+    background-image:url('coui://pa/ui/backgrounds/default.png');
+    background-size: cover;
+    border-top: rgba(0, 179, 255, 0.5);
+    border-bottom: rgba(0, 179, 255, 0.5);
+    border-radius: 1px;
+    border-left: #00b3ff00;
+    border-right:#00b3ff00;
+    border-color: rgba(0, 179, 255, 0.24);
+    box-shadow: 0px 0px 1px 5px rgba(0, 179, 255, 0.5),0px 5px 1px 5px rgba(0, 179, 255, 0.5);
+}
+
+.background_glow{
+    background: url('') no-repeat;
+
+}
+
+body{
+    height: 100%;
+    width: 100%;
+   
+    background-size: cover;
+    background-position-x: 0px;
+    background-position-y: 0px;
+    background-position: bottom left;
+ 
+    background:none;
+    color: #e6e6e6;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-size: 1em;
+    font-family: "Sansation";
+    -webkit-user-select: none;
+}
+.container {
+    width: 100%;
+    height: calc(100% - 10px);
+}
+
+.tab-pane {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.col-padding {
+    padding: 0px 16px;
+}
+
+
+.wrap {
+    border-width: 10px 21px 21px 21px;
+    border-image: url('coui://ui/main/shared/img/buttons/btn_lrg_std.png') 10 21 21 21;
+    box-shadow: inset 500px 500px 500px 500px #0d0d0d;
+}
+
+#main .wrapper {
+    height: 100%;
+}
+
+#main {
+    padding-left: 0;
+}
+
+    #main .header {
+        padding-top: 45px;
+    }
+
+    #main .content {
+        padding-top: 97px;
+    }
+
+
+
+.col {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0px 0px 20px rgba(255,255,255,.05);
+}
+
+#new-game-left {
+    display: inline-block;
+}
+
+    #new-game-left .form-group {
+        position: relative;
+        height: 100%;
+    }
+
+    #new-game-left p {
+        margin-bottom: 0;
+    }
+
+.header
+{
+    font-size: 2em;
+    text-align: left;
+    padding: 15px;
+    height: auto;
+    flex-shrink: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 10px 0px 10px 0px;
+    color: #00B3FF;
+    text-shadow: 0px 0px 20px #00B3FF;
+}
+
+.commander-select
+{
+    height: 100%;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 24px;
+    background-color: #202020;;
+    box-shadow: 0px 0px 4px #00B3FF;
+    text-align: center;
+    color: #FFF;
+    padding-top: 20px;
+}
+
+#game-commander-preview
+{
+    padding: 20px 0;
+}
+
+#faction-select {
+    height: 30px;
+    border: 1px solid #b2b2b2;
+    box-shadow: 0px 3px 4px rgba(0,0,0,.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: black;
+}
+
+#new-game-right {
+    width: 300px;
+    display: inline-block;
+}
+
+#commander-prev, #commander-next {
+    height: 74px;
+    width: 82px;
+}
+
+#commander-prev {
+    background: url(coui://ui/main/shared/img/buttons/btn_back.png) top center no-repeat;
+    float: left;
+}
+
+    #commander-prev:hover {
+        background: url(coui://ui/main/shared/img/buttons/btn_back_hover.png) top center no-repeat;
+    }
+
+    #commander-prev:active {
+        background: url(coui://ui/main/shared/img/buttons/btn_back_active.png) top center no-repeat;
+    }
+
+#commander-next {
+    background: url(coui://ui/main/shared/img/buttons/btn_forward.png) top center no-repeat;
+    float: right;
+}
+
+    #commander-next:hover {
+        background: url(coui://ui/main/shared/img/buttons/btn_forward_hover.png) top center no-repeat;
+    }
+
+    #commander-next:active {
+        background: url(coui://ui/main/shared/img/buttons/btn_forward_active.png) top center no-repeat;
+    }
+
+#mission-selection {
+    position: relative;
+    width: calc(100% - 600px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+.col1
+{
+    width: 90px;
+    flex-shrink: 0;
+}
+
+.card .col1 .icon {
+}
+
+.loadout-card > .card .col1 .icon
+{
+    height:90px;
+    width:90px;
+}
+
+.col2
+{
+    /* width: 345px; */
+    padding: 0px 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+    .col2 .summary
+    {
+        font-weight: bold;
+        font-size: 24px;
+        color: #199919;
+        text-shadow: none;
+        margin: 0px 0px 6px 0px;
+        line-height: 1;
+    }
+
+.card_active .col2 .summary {
+    color: #fff;
+}
+
+.col2 .desc {
+    line-height: 1.7;
+}
+
+.unknown
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px; */
+}
+
+    .unknown-default-icon
+    {
+        display: block;
+        font-size: 5em;
+        font-weight: bolder;
+    }
+
+    .unknown-description
+    {
+        margin: 10px 0px 0px 0px;
+        padding: 0px 16px;
+    }
+
+
+.section_wrapper {
+    margin: 0px 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+
+.section_title {
+    white-space: nowrap;
+}
+
+.div_credits_top_spacer {
+    display: block;
+    width: 100%;
+    height: 43px;
+}
+
+
+.header{
+    border-radius: 10px;
+    background-color: rgba(54, 54, 54, 0.5);
+    display: inline-block;
+}
+
+
+
+#campaign{
+    max-width:20%;
+    min-width: 20%;
+
+
+}
+
+
+#campaign-description{
+    max-width:100%;
+    min-width: 100%;
+    height: 100px;
+
+
+}
+
+.mission-selection-wrapper{
+    max-width:30%;
+    min-width: 30%;
+    position: relative;
+    overflow: auto;
+  
+    flex-direction: column;
+
+}
+
+
+
+#tab3 {
+    display: flex;
+    flex:auto
+}
+
+.mission-wrapper{
+    position: relative;
+    margin-top: 6px;
+    max-width:98%;
+    min-width: 98%;
+    border-style: solid;
+    height:100px;
+    max-height: 100px;
+    background: #202020;
+    border: 1px solid #00B3FF;
+    margin-left: 1%;
+    margin-right: 1%;
+    flex-direction: row;
+    border-radius: 10px;
+}
+
+.selected{
+    background: rgba(30, 122, 161, 0.589);
+    border: 1px solid #00B3FF;
+    box-shadow: inset 0px 0px 10px rgb(0, 179, 255);
+}
+
+#mission-name{
+    text-align: left;
+    text-decoration: solid;
+    color:rgb(0, 132, 255);
+    text-shadow: 0px 0px 10px rgb(0, 132, 255);
+    font-size: 24px;
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 20px;
+}
+
+#mission-number{
+    margin-top: 10px;
+    text-align: left;
+    margin-left: 10px;
+    text-decoration: solid;
+    color:rgb(255, 255, 255);
+    height: 20px;
+}
+.mission-image{
+    height: 98px;
+    width: 98px;
+    border-color: rgb(0, 179, 255);
+    border-width: 0px 1px 0px 0px;
+    overflow: hidden;
+    border-radius: 10px;
+    border-style: solid;
+}
+#mission-description{
+    width:90%;
+    color: orange;
+    text-shadow: 0px 0px 10px orangered;
+
+    margin-left: 10px;
+}
+.image-wrapper{
+    width:100px;
+}
+
+.mission-divider{
+    width:5%;
+    min-width: 5%;
+    background-color: #3d3d3d;
+    box-shadow: inset 0px 0px 100px rgb(27, 27, 27),0px 0px 30px rgb(27, 27, 27);
+}
+
+.mission-details{
+    width:100%;
+    height: 85%;
+}
+
+
+#mission-details-wrapper{
+    max-width:39.4%;
+    min-width: 35.4%;
+    height: 60%;
+    margin: 10px;
+    border-radius: 25px;
+    background-color: #202020;
+    box-shadow: 0px 0px 4px #00B3FF;
+
+}
+
+#mission-name-details{
+    text-align: center;
+    text-decoration: solid;
+    font-size: large;
+    color:aqua;
+    text-shadow: 0px 0px 5px rgb(0, 168, 168);
+
+}
+
+.mission-image-details{
+    height: 400px;
+    width: 400px;
+    margin-right: 10px;
+ 
+    box-shadow: 0px 0px 4px #00B3FF;
+}
+
+#mission-description-details{
+    width:90%;
+    color: orange;
+    font-size: 18px;
+    text-shadow: 0px 0px 10px rgb(172, 112, 0);
+}
+
+.mission-details-left{
+    width:60%;
+    height: 10%;
+    padding-left: 10px;
+    overflow: auto;
+    overflow: hidden;
+}
+
+.mission-details-right{
+    width:40%;
+    height: 100%;
+}
+
+
+#mission-rewards{
+    width:90%;
+    color: rgb(0, 255, 106);
+    font-size: 18px;
+    text-shadow: 0px 0px 10px rgb(0, 182, 76);
+}
+
+#mission-warnings{
+    width:90%;
+    color: rgb(255, 77, 77);
+    font-size: 18px;
+    text-shadow: 0px 0px 10px rgb(167, 32, 32);
+}
+
+#mission-objectives{
+    width:90%;
+    font-size: 18px;
+    color: #f2ff35;
+    text-shadow: 0px 0px 10px rgb(167, 167, 0);
+}
+
+#mission-lore{
+
+    color: #00B3FF;
+    font-size: 14px;
+    width: 100%;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    text-shadow: 0px 0px 10px #00B3FF;
+}
+
+.mission-details-height-wrapper{
+    height: 62.1%;
+    overflow: hidden;
+    position:static;
+}
+
+.mission-lore-height-wrapper{
+    height: 37.9%;
+    overflow: auto;
+    position: absolute;
+}
+
+#leftMargin10{
+    margin-left: 10px;
+}
+
+
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+    <!-- Change these title attributes -->
+    <noloc><title>Battlepass</title></noloc>
+    <script src="bundle://boot/boot.js" type="text/javascript"></script>
+    <!-- optional, if you're going to use select boxes -->
+    <link href="bundle://boot/boot.css" rel="stylesheet" type="text/css" />
+    <!-- optional, if you're going to use select boxes -->
+    <link href="coui://ui/main/shared/css/template.css" rel="stylesheet" type="text/css" />
+    <link href="coui://ui/main/shared/css/landing_page.css" rel="stylesheet" type="text/css" />
+    <link href="coui://ui/mods/battlepass/css/battlepass_menu.css" rel="stylesheet" type="text/css" />
+    <script src="coui://ui/mods/battlepass/battlepass_panel.js" type="text/javascript"></script>
+    <script src="coui://ui/main/shared/js/commander_utility.js" type="text/javascript"></script>
+    <script src="coui://ui/main/shared/js/playfab.js" type="text/javascript"></script>
+    <script src="coui://ui/main/shared/js/ui_media_utility.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+
+
+<!--- VISUAL TREATMENTS ---->
+<div class="background_glow"></div>
+
+<!-- TITLE -->
+<div class="section_title">
+    <div class="content">
+        <div class="btn_std_ix btn_back_small" data-bind="click: back">
+            <span class="glyphicon glyphicon-chevron-left carat"></span>
+        </div>
+        </div>
+    </div>
+</div>
+<!-- CONTENT -->
+<div class="section_content_campaign">
+<div class="section_wrapper overall_width">
+    <div id="tab3" class="tab-pane" style="display: visible">
+     
+
+        <div id="campaign" class="col">
+            <div class="header" id ="leftMargin10"><loc>Campaign</loc></div>
+            <div class="col-padding">
+                <div class="form-group">
+                    <div class="commander-select">
+                    <p data-bind="text: selectedCampaignName"></p>
+                    <p id="game-commander-preview"><img src="" data-bind="attr: { src: campaignImg }" height="275" width="275" /></p>
+                    <p id = "campaign-description" data-bind="text: campaignDescription"></p>
+                    <div id="commander-prev" data-bind="click_sound: 'default', rollover_sound: 'default', click: previousCampaign" ></div>
+                    <div id="commander-next" data-bind="click_sound: 'default', rollover_sound: 'default', click: nextCampaign" ></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mission-divider" class="col">
+            <p><br></p>
+         </div>
+
+        <div class="mission-selection-wrapper" class="col">
+            <div class="header" id ="leftMargin10"><loc>Mission Selection</loc></div>
+            <div class="mission-selection">
+           
+                <!-- ko foreach: missions -->
+                <div class = "mission-wrapper" data-bind="click: function (){model.selectMission($data.index)}, css: {'selected':  model.selectedMission().index == $data.index}">
+                    <table>
+                        <tr>
+                   
+                        <td class = image-wrapper>
+                            <div class = image-wrapper>
+                                <p class="mission-image"><img class="mission-image" src="" data-bind="attr: { src: $data.img }"/></p>
+                            </div>
+                        </td>
+                        <td>
+                            <p id = "mission-number" data-bind="html: $data.missionNumbering"></p>
+                            <div id ="mission-name" data-bind="text: $data.name"></div>
+                        </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- /ko -->
+            </div>
+        </div>
+
+        <div class="mission-divider" class="col">
+           <p><br></p>
+        </div>
+        
+        <div id="mission-details-wrapper" class="col">
+            <div class="header" id ="leftMargin10"><loc>Mission Details</loc></div>
+            <div class="mission-details">
+                <table>
+                    <tr>
+                  
+                    <td class = "mission-details-left">
+                        <div class = "mission-details-height-wrapper">
+                            <div id ="mission-name-details" data-bind="text: selectedMissionName"></div>
+                            <p id = "mission-description-details" data-bind="html: selectedMissionDescription"></p>
+                            <br>
+                            
+                            <p id = "mission-warnings" data-bind="html: selectedMissionWarnings"></p>
+                            <br><br>
+                            <p id = "mission-rewards" data-bind="html: selectedMissionRewards"></p>
+                            <br><br>
+                        </div>
+                        <div class="header"><loc>Lore</loc></div>
+                        <div class = "mission-lore-height-wrapper">
+                            <p id = "mission-lore" data-bind="html: selectedMissionLore"></p>
+                        </div>
+              
+                    </td>
+                    <td class = "mission-details-right">
+                        <p><img class="mission-image-details"src="" data-bind="attr: { src: selectedMissionImage }" height="512" width="512" /></p>
+                        <div class="header"><loc>Objectives</loc></div>
+                         <p id = "mission-objectives" data-bind="html: selectedMissionDetails"></p>
+                    </td>
+                    </tr>
+                </table>
+               
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- COMMIT -->
+<div class="div_commit_cont">
+ 
+    <div class="btn_hero"">
+        <div class="btn_label" style="padding: 0px 40px;" data-bind="click_sound: 'default', rollover_sound: 'default', click: createGame" >
+            <loc>Start Selected Mission</loc>
+        </div>
+    </div>
+</div>
+   
+    
+</body>
+</html>
+<script>
+
+
+    ko.cleanNode(document.getElementById("body"));
+    ko.applyBindings(model, document.getElementById("body"));
+  
+  </script>

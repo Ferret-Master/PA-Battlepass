@@ -1,0 +1,17 @@
+<div
+  id="battlepass-button"
+  class="nav_item nav_item_text btn_std_ix"
+ 
+  data-bind="click: model.switchToBattlepass, click_sound: 'default', rollover_sound: 'default'"
+>
+  <loc>Battlepass</loc>
+</div>
+
+
+<script>
+
+
+  ko.cleanNode(document.getElementById("battlepass-button"));
+  ko.applyBindings(model, document.getElementById("battlepass-button"));
+
+</script>

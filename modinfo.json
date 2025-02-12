@@ -1,0 +1,29 @@
+{
+    "context": "client",
+    "identifier": "com.pa.ferretmaster.battlepass",
+    "display_name": "Ferret's PA Battlepass",
+    "description": "Adds a battlepass with daily quests, challenges, progression, and rewards/custom achievements",
+    "author": "Ferretmaster",
+    "version": "1.0",
+    "build": "120799",
+    "date": "2025-02-12",
+    "signature": "not yet implemented",
+    "forum": "",
+    "icon": "coui://ui/mods/battlepass/titans.jpg",
+    "priority": 100,
+    "category": [
+        "titans", "in-game","server"
+    ],
+    "scenes": {
+      "start": [
+        "coui://ui/mods/battlepass/start.js"
+      ],
+      "Campaigns_Panel":[
+        "coui://ui/mods/battlepass/campaign_menu.html"
+      ]
+    },
+    "dependencies":[
+      "com.pa.raevn.rfloatframe"
+    ]
+  
+}
